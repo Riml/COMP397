@@ -8,6 +8,8 @@ var scene;
 // Game scenes
 var menuScene;
 var gameScene;
+// Player inventory
+var partsOfAmulet = 0;
 // Preload Assets required
 var assetData = [
     { id: "Start", src: "../../Assets/images/Start.png" },
@@ -53,15 +55,65 @@ function changeScene() {
             currentScene = menuScene;
             console.log("Starting MENU scene");
             break;
-        case config.Scene.GAME:
+        case config.Scene.GAME_START:
             stage.removeAllChildren();
-            currentScene = new scenes.Game();
-            console.log("Starting GAME scene");
+            currentScene = new scenes.Game_Start();
+            console.log("Starting GAME_START scene");
             break;
-        case config.Scene.GAMEOVER:
+        case config.Scene.HOME_FIRST:
             stage.removeAllChildren();
-            currentScene = new scenes.Gameover();
-            console.log("Starting GAMEOVER scene");
+            currentScene = new scenes.Home_First();
+            console.log("Starting HOME_FIRST scene");
+            break;
+        case config.Scene.HOME_DESTROYED:
+            stage.removeAllChildren();
+            currentScene = new scenes.Home_Destroyed();
+            console.log("Starting HOME_DESTROYED scene");
+            break;
+        case config.Scene.HOME_METEOR:
+            stage.removeAllChildren();
+            currentScene = new scenes.Home_Meteor();
+            console.log("Starting HOME_METEOR scene");
+            break;
+        case config.Scene.HOME_PORTAL:
+            stage.removeAllChildren();
+            currentScene = new scenes.Home_Portal();
+            console.log("Starting HOME_PORTAL scene");
+            break;
+        case config.Scene.HOME_THUNDER:
+            stage.removeAllChildren();
+            currentScene = new scenes.Home_Thunder;
+            console.log("Starting HOME_THUNDER scene");
+            break;
+        case config.Scene.HOME_RAIN:
+            stage.removeAllChildren();
+            currentScene = new scenes.Home_Rain;
+            console.log("Starting HOME_RAIN scene");
+            break;
+        case config.Scene.FOREST_START:
+            stage.removeAllChildren();
+            currentScene = new scenes.Forest_Start;
+            console.log("Starting FOREST_START scene");
+            break;
+        case config.Scene.FOREST_HUNT:
+            stage.removeAllChildren();
+            currentScene = new scenes.Forest_Hunt;
+            console.log("Starting FOREST_HUNT scene");
+            break;
+        case config.Scene.FOREST_LOOSE:
+            stage.removeAllChildren();
+            currentScene = new scenes.Forest_Loose;
+            console.log("Starting FOREST_LOOSE scene");
+            break;
+        case config.Scene.FOREST_WIN:
+            stage.removeAllChildren();
+            currentScene = new scenes.Forest_Win;
+            console.log("Starting FOREST_WIN scene");
+            break;
+        case config.Scene.NEW_DIMENSION:
+            stage.removeAllChildren();
+            currentScene = new scenes.New_Dimension;
+            console.log("Starting FOREST_WIN scene");
             break;
     }
 }

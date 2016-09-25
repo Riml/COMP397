@@ -35,4 +35,4 @@ var scenes;
     }(objects.Scene));
     scenes.Gameover = Gameover;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=gameover.js.map
+//# sourceMappingURL=_gameover.js.map

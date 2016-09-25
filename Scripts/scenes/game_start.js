@@ -9,17 +9,19 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var Game = (function (_super) {
-        __extends(Game, _super);
-        function Game() {
+    var Game_Start = (function (_super) {
+        __extends(Game_Start, _super);
+        function Game_Start() {
             _super.call(this);
         }
         // PUBLIC FUNCTIONS
-        Game.prototype.start = function () {
+        Game_Start.prototype.start = function () {
             // Add objects to the scene
             console.log("Game scene started");
+            partsOfAmulet = 0;
+            l;
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("PLAY SCENE", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("One day you just wake up and...", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this.addChild(this._gameLabel);
             // Create button for scene and add to Game Scene container. Register for onclick event
             this._gameButton = new objects.Button("Back", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
@@ -28,16 +30,16 @@ var scenes;
             // Add gamescene to main stage container. 
             stage.addChild(this);
         };
-        Game.prototype.update = function () {
+        Game_Start.prototype.update = function () {
             // Update objects
         };
-        Game.prototype._onBackButtonClick = function (event) {
+        Game_Start.prototype._onBackButtonClick = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.MENU;
+            scene = config.Scene.HOME_FIRST;
             changeScene();
         };
-        return Game;
+        return Game_Start;
     }(objects.Scene));
-    scenes.Game = Game;
+    scenes.Game_Start = Game_Start;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=game.js.map
+//# sourceMappingURL=game_start.js.map

@@ -4,7 +4,7 @@
 */
 
 module scenes {
-    export class Game extends objects.Scene {
+    export class Game_Start extends objects.Scene {
 
         // PRIVATE VARIABLES
         private _gameLabel : objects.Label;
@@ -18,9 +18,10 @@ module scenes {
         public start() : void {
             // Add objects to the scene
             console.log("Game scene started");
+            partsOfAmulet=0;
 
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("PLAY SCENE", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("One day you just wake up and...", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this.addChild(this._gameLabel);
 
             // Create button for scene and add to Game Scene container. Register for onclick event
@@ -38,7 +39,7 @@ module scenes {
 
         private _onBackButtonClick(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.MENU;
+            scene = config.Scene.HOME_FIRST;
             changeScene();
         }
     }
