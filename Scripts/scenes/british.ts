@@ -21,8 +21,7 @@ module scenes {
 
 
             // Create and add level description
-            this._levelDescription = new objects.Label("You come closer to the ships and find yourself surrounded by a couple dozens of armed Conquistadors"
-            +" and you decide to ...", 
+            this._levelDescription = new objects.Label("Closer you go to the ships, but at the snap of a lightning you've found yourself surrounded by dozens of armed Conquistadors. ", 
             "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 

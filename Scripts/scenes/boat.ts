@@ -21,7 +21,7 @@ module scenes {
             this.addChild(this._bg);
 
             // Create and add level description
-            this._levelDescription = new objects.Label("You swimmed a bit from shore, seems like a good place for fishing and you decide to ...", 
+            this._levelDescription = new objects.Label("Row! Row! Row! Your boat is now far from the shore. Oh! Seems like a great place to go fishing, and so you...", 
             "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 

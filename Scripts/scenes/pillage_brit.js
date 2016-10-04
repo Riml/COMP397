@@ -18,9 +18,10 @@ var scenes;
             this.addChild(this._bg);
             partsOfAmulet += 1;
             // Create and add level description
-            this._levelDescription = new objects.Label("When you finally send every single of them and whole ship with \"leftovers\" to Helheimm " +
-                "You picked up a mysterious piece of a rune, that looked familiar to you... Decided to grab it and leave thinking for alter  " +
-                " you start cleaning you axe when your heard some singing coming from the rocks nearby.. ", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("Swoosh! Swish! Sounded your ax, as you end every single one of them to Helheim." +
+                " Taking a deep breath to calm your winning heart, you picked up a piece of a mysterious rune - looks quite familiar ain't it..." +
+                "\n\n" +
+                "You grab it as your loot, thinking as an offering for the Gods. You start cleaning your ax when you hear singing coming from the rocks nearby...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             this._leftButtin = new objects.Button("myrmaids", config.Screen.BACK_BUTTON_X - 20, config.Screen.BACK_BUTTON_Y + 405);

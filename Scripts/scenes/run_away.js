@@ -17,8 +17,12 @@ var scenes;
             this._bg = new createjs.Bitmap(assets.getResult("background"));
             this.addChild(this._bg);
             // Create and add level description
-            this._levelDescription = new objects.Label("You succesfully run away from the conquistadors. However,you was notice by a couple of old vikings... "
-                + " Know as first of a kind Viking, who run from fight, you was exiled from the village and even Valkyria left you...what a shame", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("Thankfully your speed has not diminished with your age, you run away from the Conquistadors." +
+                " However as you run with your tail between your legs, you were noticed by a couple of Elder Vikings." +
+                "\n\n" +
+                "One of them was your King, who exiled you from the village the moment you approached them. Sadly, Valkyria seemingly left you as well..." +
+                "\n\n" +
+                "What a shame; try again?", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             //this._leftButtin = new objects.Button("boat", config.Screen.BACK_BUTTON_X-20, config.Screen.BACK_BUTTON_Y+405);

@@ -17,8 +17,10 @@ var scenes;
             this._bg = new createjs.Bitmap(assets.getResult("background"));
             this.addChild(this._bg);
             // Create and add level description
-            this._levelDescription = new objects.Label("You forget that you are Viking and have no idea how to fish..."
-                + " Just after first try you found yourself and you lovely axe deepdown in sea... Oh well, maybe next time you will decide to do something more Viking-ish", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("Wai- You are a VIKING, and VIKING don't fish. Yet you decided to try it." +
+                " Uh-oh your first try, and you've found yourself and your hot diggity damn ax deep down the sea." +
+                "\n\n" +
+                "Oh well, maybe next time you will decide to do the VIKING WAY.", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             //this._leftButtin = new objects.Button("boat", config.Screen.BACK_BUTTON_X-20, config.Screen.BACK_BUTTON_Y+405);

@@ -25,7 +25,7 @@ module scenes {
             this.addChild(this._bg);
 
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Usual day of the Viking...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._gameLabel = new objects.Label("The Daily Toil of a Viking!", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._gameLabel);
 
             // Create button for scene and add to Game Scene container. Register for onclick event
