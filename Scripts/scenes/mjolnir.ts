@@ -31,7 +31,7 @@ module scenes {
             this.addChild(this._bg);
 
             // Create and add level description
-            this._levelDescription = new objects.Label("You obtained Mjolnir! The battle awiating my friend!", 
+            this._levelDescription = new objects.Label("You obtained Mjolnir! The battle awaiting my friend! ", 
             "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 

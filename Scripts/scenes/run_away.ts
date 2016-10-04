@@ -37,7 +37,7 @@ module scenes {
             "One of them was your King, who exiled you from the village the moment you approached them. Sadly, Valkyria seemingly left you as well..."+
             "\n\n"+
             "What a shame; try again?", 
-            "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            "35px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
