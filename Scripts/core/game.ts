@@ -59,7 +59,7 @@ var assetData:objects.Asset[] = [
 function preload() {
     // Create a queue for assets being loaded
     assets = new createjs.LoadQueue(false);
-    //assets.installPlugin(createjs.Sound);
+    assets.installPlugin(createjs.Sound);
     
 
     // Register callback function to be run when assets complete loading.
