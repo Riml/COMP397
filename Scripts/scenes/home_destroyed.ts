@@ -1,8 +1,13 @@
-/*
-    Scene  module to group all user-defined scenes  under the same "namespace aka module"
-    Game scene that contains all assets and functionality associated with the game itself
+/*--------------------------------------
+Created by: Ilmir Tayhcinov
+Created on: September 28, 2016
+Last Modifie by: Ilmir Tayhcinov
+Last Modified: October 4, 2016
+Based on work of: Wallace Balaniuc
+------------------------------------------
+Scene  module to group all user-defined scenes  under the same "namespace aka module"
+Game scene that contains all assets and functionality associated with the game itself
 */
-
 module scenes {
     export class HOME_DESTROYED extends objects.Scene {
 

@@ -23,7 +23,8 @@ module scenes {
             // Create and add level description
             this._levelDescription = new objects.Label("You smash their gates! With prepared axe you are rushing towards Dwarfs' garrison..."+
             " as suddenly few dwarfs appears with several kegs of beer rather with weapons.., without thinking you joining them..."+
-            "but  drinking problem is something your family always have..."+"after pillaging most of the village you finally find wine-cellar and world lost another great Viking...", 
+            "but  drinking problem is something your family always have..."+
+            "after pillaging most of the village you finally find wine-cellar and world lost another great Viking...", 
             "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 

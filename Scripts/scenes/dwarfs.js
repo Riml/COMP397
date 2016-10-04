@@ -19,7 +19,8 @@ var scenes;
             // Create and add level description
             this._levelDescription = new objects.Label("You smash their gates! With prepared axe you are rushing towards Dwarfs' garrison..." +
                 " as suddenly few dwarfs appears with several kegs of beer rather with weapons.., without thinking you joining them..." +
-                "but  drinking problem is something your family always have..." + "after pillaging most of the village you finally find wine-cellar and world lost another great Viking...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+                "but  drinking problem is something your family always have..." +
+                "after pillaging most of the village you finally find wine-cellar and world lost another great Viking...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             //this._leftButtin = new objects.Button("boat", config.Screen.BACK_BUTTON_X-20, config.Screen.BACK_BUTTON_Y+405);

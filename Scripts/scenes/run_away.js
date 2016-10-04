@@ -3,6 +3,16 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+/*--------------------------------------
+Created by: Ilmir Tayhcinov
+Created on: September 28, 2016
+Last Modifie by: Ilmir Tayhcinov
+Last Modified: October 4, 2016
+Based on work of: Wallace Balaniuc
+------------------------------------------
+Scene  module to group all user-defined scenes  under the same "namespace aka module"
+Game scene that contains all assets and functionality associated with the game itself
+*/
 var scenes;
 (function (scenes) {
     var RUN_AWAY = (function (_super) {

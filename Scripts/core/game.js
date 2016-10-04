@@ -1,4 +1,14 @@
 /// <reference path = "_reference.ts" />
+/*--------------------------------------
+Created by: Ilmir Tayhcinov
+Created on: September 28, 2016
+Last Modifie by: Ilmir Tayhcinov
+Last Modified: October 4, 2016
+Based on work of: Wallace Balaniuc
+------------------------------------------
+Scene  module to group all user-defined scenes  under the same "namespace aka module"
+Game scene that contains all assets and functionality associated with the game itself
+*/
 // Global Variables
 var assets;
 var canvas;
@@ -36,12 +46,13 @@ var assetData = [
     { id: "stay", src: "../../Assets/images/stay.png" },
     { id: "amulet", src: "../../Assets/images/amulet.png" },
     { id: "MJOLNIR_B", src: "../../Assets/images/MJOLNIR_B.png" },
+    { id: "bgMusic", src: "../../Assets/music/bgMusic.mp3" },
     { id: "background", src: "../../Assets/images/background.png" }
 ];
 function preload() {
     // Create a queue for assets being loaded
     assets = new createjs.LoadQueue(false);
-    // assets.installPlugin(createjs.Sound);
+    //assets.installPlugin(createjs.Sound);
     // Register callback function to be run when assets complete loading.
     assets.on("complete", init, this);
     assets.loadManifest(assetData);
@@ -58,6 +69,7 @@ function init() {
     createjs.Ticker.on("tick", this.gameLoop, this);
     // Set initial scene to MENU scene and call changeScene().
     scene = config.Scene.GAME_START;
+    createjs.Sound.play("bgMusic", { loop: 99 });
     changeScene();
 }
 function gameLoop(event) {

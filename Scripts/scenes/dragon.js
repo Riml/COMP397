@@ -3,6 +3,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+/*
+    Scene  module to group all user-defined scenes  under the same "namespace aka module"
+    Game scene that contains all assets and functionality associated with the game itself
+*/
 var scenes;
 (function (scenes) {
     var DRAGON = (function (_super) {
