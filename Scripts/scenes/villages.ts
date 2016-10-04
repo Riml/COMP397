@@ -21,7 +21,7 @@ module scenes {
             this.addChild(this._bg);
 
             // Create and add level description
-            this._levelDescription = new objects.Label("You are staying at the beginning of two roads, which one you will choose?", 
+            this._levelDescription = new objects.Label("As you walk, you come to the fork in the road. You continue walking on to the village of...", 
             "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 

@@ -17,8 +17,7 @@ var scenes;
             this._bg = new createjs.Bitmap(assets.getResult("background"));
             this.addChild(this._bg);
             // Create and add level description
-            this._levelDescription = new objects.Label("You was just about to enter the forest, as suddenly you rembered that there are few new villages that you wanted to \"visit\". "
-                + "You are looking at the Valkyria flying thru the skies, but decision have to be made so you are going to ...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("Your God has told you to enter the forest. But you are a rebellious viking, and so you remember to visit the new villages nearby. As you gaze at Valkyria flying through the skies, you go to...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             this._leftButtin = new objects.Button("villages", config.Screen.BACK_BUTTON_X - 20, config.Screen.BACK_BUTTON_Y + 405);

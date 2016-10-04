@@ -181,6 +181,11 @@ function changeScene() {
             currentScene = new scenes.MJOLNIR();
             console.log("Starting VILLAGES scene");
             break;
+        case config.Scene.DWARFS:
+            stage.removeAllChildren();
+            currentScene = new scenes.DWARFS();
+            console.log("Starting DWARFS scene");
+            break;
     }
 }
 //# sourceMappingURL=game.js.map

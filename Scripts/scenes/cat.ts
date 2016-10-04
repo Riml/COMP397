@@ -32,8 +32,12 @@ module scenes {
             this.addChild(this._bg);
 
             // Create and add level description
-            this._levelDescription = new objects.Label("After hours of running after poor cat"+
-            " you foot slips in a puddle and with all your mass you falling on... your lovely axe... and now you absolutly shure that it was a really bad idea", 
+            this._levelDescription = new objects.Label(
+                "Chase! Chase! Chase! After hours of running and jumping around after the cat, your"+
+                " foot finally slips on a puddle. Uh-oh! Causing you to fall with all your mighty weight, "+
+                "onto your hot diggity damn ax."+
+                "\n\n"+ 
+                "Slice it sounded, as you feel your lifeblood spill from your flesh onto the ground. Tis was definitely a bad idea, after all, you were chasing a black cat.", 
             "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 

@@ -28,7 +28,7 @@ var scenes;
             this.addChild(this._bg);
             partsOfAmulet += 1;
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Meteor appeared out of nowhere and even your mighty axe was not able to stop it", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._gameLabel = new objects.Label("SMASH! A meteor appeared out of nowhere, smashing into you! Your hot diggity damn ax was not able to stop it, and you smolder and perish.", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._gameLabel);
             // Create button for scene and add to Game Scene container. Register for onclick event
             this._gameButton = new objects.Button("start", config.Screen.CENTER_X + 50, config.Screen.CENTER_Y + 260);

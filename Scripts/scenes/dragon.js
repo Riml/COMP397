@@ -22,9 +22,14 @@ var scenes;
             this.addChild(this._bg);
             partsOfAmulet += 1;
             // Create and add level description
-            this._levelDescription = new objects.Label("After visiting your old friend dragon and pillage a dozen of villages with him, you decided to " +
-                "take a break and enjoy a food obtained by a \"hard\" work. In addition, Dragon gives you a piece of strange amulet... But food is better then thinking so you  "
-                + "take it and start your meal without second though. \n But what to do after, hunt more or head home? ", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("Dun! Dun! Dunnnnnn! Heading to the Drakon Mountain you go, where you meet with the Dragon" +
+                " - your best friend actually. One of your favorite activities as best friends (since birth)"
+                + " is to pillage villages. So you two just went and did that, bonding over the loots!" +
+                "\n\n" +
+                "Taking a break, you enjoy the food obtained by \"hard\" work. It turns out, and it's gift giving time;" +
+                " as Dragon presents you a strange amulet! Thanking your best friend, you take it and continue munching on your food." +
+                "\n\n" +
+                "Hm... full from the feast, you say goodbye to your friend and go... hunt by yourself or head home.", "30px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             this._leftButtin = new objects.Button("cat", config.Screen.BACK_BUTTON_X - 20, config.Screen.BACK_BUTTON_Y + 405);

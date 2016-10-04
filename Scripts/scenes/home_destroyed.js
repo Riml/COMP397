@@ -27,9 +27,9 @@ var scenes;
             this._bg = new createjs.Bitmap(assets.getResult("background"));
             this.addChild(this._bg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("By returning home you find it in ruins. It apparently was smashed by a meteor..." +
-                "Small still hot rock is peacfuly lying in the center of the house. You notice a small keyhole like place in it...  "
-                + "But leaving thinking for later you decide to...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._gameLabel = new objects.Label("You return home, your smashed home, smashed by meteors. As you go through the rubble," +
+                " you come across a small yet smoking hot rock. Wait a minute, is that a small keyhole in " +
+                "the center of the rock? Does the keyhole match the size of the amulet?", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._gameLabel);
             if (partsOfAmulet >= 2) {
                 // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene

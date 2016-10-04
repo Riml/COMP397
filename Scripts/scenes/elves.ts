@@ -21,11 +21,18 @@ module scenes {
             this.addChild(this._bg);
 
             // Create and add level description
-            this._levelDescription = new objects.Label("With screaming all around you are leisurely walking into elves vilages cleaning you axe after unpleasent greeting of guards"+
-            ", as most beatiful girl appears in front of you. Spitting out part of probably some of her relatives, you are trying to make a best smile that you ever have...however she faints out "
-            +"..when she finally wakes up ... at you home...she agrees to live with you if you stop pillage villages and when you break your promise in less than hour she poisons you and herslef"
-            +". What a romatic death!", 
-            "35px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("As you approach the Elven Village, you hear screaming all"+
+            " around you as you sliced the guards after they preemptively attack you. Continuing into the village, as the villagers avoid you."+ 
+            "\n\n"+
+            "You come across a beautiful elven woman. Her face twists into a vicious snarl, spitting at you as you approach."+
+            " PTUI! Her spit sounded as it landed right on your face. You smile, recognizing and approving of her feral disposition."+
+            " You are about to say something when she faints dramatically pitching forward, luckily you catch her."+
+            "\n\n"+
+            "Back at your home, she finally wakes. To your euphoria, she grudgingly agrees to live with you, once you promise to stop pillaging their village."+
+            " You live with her for days, seeing her blossom and you thought she truly loved you."+
+            "\n\n"+
+            "Nay, you are the Viking and she is the Elf. She poisons you and herself, dying in each other's arms.", 
+            "30px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene

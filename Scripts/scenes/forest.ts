@@ -22,8 +22,7 @@ module scenes {
 
             // Create and add level description
             this._levelDescription = new objects.Label(
-                "You was just about to enter the forest, as suddenly you rembered that there are few new villages that you wanted to \"visit\". "
-                +"You are looking at the Valkyria flying thru the skies, but decision have to be made so you are going to ...", 
+                "Your God has told you to enter the forest. But you are a rebellious viking, and so you remember to visit the new villages nearby. As you gaze at Valkyria flying through the skies, you go to...", 
                 "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
 

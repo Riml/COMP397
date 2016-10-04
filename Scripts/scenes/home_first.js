@@ -28,7 +28,7 @@ var scenes;
             this._bg = new createjs.Bitmap(assets.getResult("background"));
             this.addChild(this._bg);
             // Create and add level description
-            this._levelDescription = new objects.Label("You wake up it is a beatiful morning! GET UP! Take you hot diggity damn ax, and out ofthe door!" +
+            this._levelDescription = new objects.Label("You wake up it is a beatiful morning! GET UP! Take you hot diggity damn ax, and out of the door!" +
                 " The mighty Odin tells you to ...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
