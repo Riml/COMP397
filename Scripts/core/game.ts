@@ -199,7 +199,12 @@ function changeScene() : void {
             stage.removeAllChildren();
             currentScene = new scenes.MJOLNIR();
             console.log("Starting VILLAGES scene");
-            break;                    
+            break;
+        case config.Scene.DWARFS :
+            stage.removeAllChildren();
+            currentScene = new scenes.DWARFS();
+            console.log("Starting DWARFS scene");
+            break;                        
 
 
 
