@@ -5,56 +5,55 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var HOME_FIRST = (function (_super) {
-        __extends(HOME_FIRST, _super);
-        function HOME_FIRST() {
+    var HUNT = (function (_super) {
+        __extends(HUNT, _super);
+        function HUNT() {
             _super.call(this);
         }
         // PUBLIC FUNCTIONS
-        HOME_FIRST.prototype.start = function () {
+        HUNT.prototype.start = function () {
             // Add objects to the scene
-            console.log("HOME_FIRST");
-            partsOfAmulet = 0;
+            console.log("HUNT");
             this._bg = new createjs.Bitmap(assets.getResult("background"));
             this.addChild(this._bg);
             // Create and add level description
-            this._levelDescription = new objects.Label("You wake up, it is a beatiful morning! You take your lovely axe and go outside and decide to...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("You entered the forest, and from here you can see a Dragon mountain and path to a place with a cat. It is hunt time! so you decide to hunt for...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
-            this._leftButtin = new objects.Button("shore", config.Screen.BACK_BUTTON_X - 20, config.Screen.BACK_BUTTON_Y + 405);
+            this._leftButtin = new objects.Button("cat", config.Screen.BACK_BUTTON_X - 20, config.Screen.BACK_BUTTON_Y + 405);
             this.addChild(this._leftButtin);
             this._leftButtin.on("click", this._onLeftButtonClick, this);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp previous-next scene
-            this._midButtin = new objects.Button("stay", config.Screen.NEXT_BUTTON_X, config.Screen.NEXT_BUTTON_Y + 420);
+            this._midButtin = new objects.Button("back", config.Screen.NEXT_BUTTON_X, config.Screen.NEXT_BUTTON_Y + 420);
             this.addChild(this._midButtin);
             this._midButtin.on("click", this._onMidButtonClick, this);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp previous-next scene
-            this._rightButton = new objects.Button("forest", config.Screen.NEXT_BUTTON_X + 180, config.Screen.NEXT_BUTTON_Y + 410);
+            this._rightButton = new objects.Button("dragon", config.Screen.NEXT_BUTTON_X + 180, config.Screen.NEXT_BUTTON_Y + 410);
             this.addChild(this._rightButton);
             this._rightButton.on("click", this._onRightButtonClick, this);
             // Add gamescene to main stage container. 
             stage.addChild(this);
         };
-        HOME_FIRST.prototype.update = function () {
+        HUNT.prototype.update = function () {
             // Update objects
         };
-        HOME_FIRST.prototype._onLeftButtonClick = function (event) {
+        HUNT.prototype._onLeftButtonClick = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.SHORE;
+            scene = config.Scene.CAT;
             changeScene();
         };
-        HOME_FIRST.prototype._onMidButtonClick = function (event) {
+        HUNT.prototype._onMidButtonClick = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.HOME_DEATH;
+            scene = config.Scene.HOME_DESTROYED;
             changeScene();
         };
-        HOME_FIRST.prototype._onRightButtonClick = function (event) {
+        HUNT.prototype._onRightButtonClick = function (event) {
             // Set global variable to Menu Scene and call changescene function
-            scene = config.Scene.FOREST;
+            scene = config.Scene.DRAGON;
             changeScene();
         };
-        return HOME_FIRST;
+        return HUNT;
     }(objects.Scene));
-    scenes.HOME_FIRST = HOME_FIRST;
+    scenes.HUNT = HUNT;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=home_first.js.map
+//# sourceMappingURL=hunt.js.map

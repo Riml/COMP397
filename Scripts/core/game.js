@@ -147,9 +147,24 @@ function changeScene() {
             currentScene = new scenes.ELVES();
             console.log("Starting VILLAGES scene");
             break;
-        case config.Scene.DWARFS:
+        case config.Scene.CAT:
             stage.removeAllChildren();
-            currentScene = new scenes.DWARFS();
+            currentScene = new scenes.CAT();
+            console.log("Starting CAT scene");
+            break;
+        case config.Scene.DRAGON:
+            stage.removeAllChildren();
+            currentScene = new scenes.DRAGON();
+            console.log("Starting DRAGON scene");
+            break;
+        case config.Scene.HUNT:
+            stage.removeAllChildren();
+            currentScene = new scenes.HUNT();
+            console.log("Starting HUNT scene");
+            break;
+        case config.Scene.MJOLNIR:
+            stage.removeAllChildren();
+            currentScene = new scenes.MJOLNIR();
             console.log("Starting VILLAGES scene");
             break;
     }

@@ -18,9 +18,9 @@ var scenes;
             this.addChild(this._bg);
             // Create and add level description
             this._levelDescription = new objects.Label("With screaming all around you are leisurely walking into elves vilages cleaning you axe after unpleasent greeting of guards" +
-                "as most beatiful girls appears in front of you. Spitting out part of probably some of her relatives you trying to make a best smile that you ever have...however she faints out "
+                ", as most beatiful girl appears in front of you. Spitting out part of probably some of her relatives, you are trying to make a best smile that you ever have...however she faints out "
                 + "..when she finally wakes up ... at you home...she agrees to live with you if you stop pillage villages and when you break your promise in less than hour she poisons you and herslef"
-                + "What a romatic death!", "35px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+                + ". What a romatic death!", "35px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             //this._leftButtin = new objects.Button("boat", config.Screen.BACK_BUTTON_X-20, config.Screen.BACK_BUTTON_Y+405);

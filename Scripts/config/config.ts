@@ -16,16 +16,16 @@ module config {
         public static CAT : number = 9;
         public static VILLAGES : number = 10;
         public static MYRMAIDS : number = 11;
-        public static PILLAGE : number = 12;
+        public static PILLAGE : number = 12;//not in use
         public static DRAGON : number = 13;
         public static DWARFS : number = 14;
-        public static NEIGHBOURS : number = 15;
+        public static NEIGHBOURS : number = 15;//not in use
         public static HOME_DEATH : number = 16;
         public static HOME_DESTROYED : number = 17;
         public static RUN_AWAY : number = 18;
         public static PILLAGE_BRIT : number = 19;
         public static ELVES : number = 20;
-        //public static RUN_AWAY : number = 21;
+        public static MJOLNIR : number = 21;
         //public static RUN_AWAY : number = 22;
         
         

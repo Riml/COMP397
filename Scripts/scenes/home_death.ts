@@ -19,9 +19,15 @@ module scenes {
         public start() : void {
             // Add objects to the scene
             console.log("HOME_DEATH");
-            partsOfAmulet=0;
+            
+            
+            this._bg = new createjs.Bitmap(assets.getResult("background"));
+            this.addChild(this._bg);
+            partsOfAmulet+=1;
+
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("Meteor appeared out of nowhere \n and even yot mighty axe was not able to stop it", "40px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("Meteor appeared out of nowhere and even your mighty axe was not able to stop it", 
+            "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._gameLabel);
 
             // Create button for scene and add to Game Scene container. Register for onclick event

@@ -20,15 +20,16 @@ var config;
     Scene.CAT = 9;
     Scene.VILLAGES = 10;
     Scene.MYRMAIDS = 11;
-    Scene.PILLAGE = 12;
+    Scene.PILLAGE = 12; //not in use
     Scene.DRAGON = 13;
     Scene.DWARFS = 14;
-    Scene.NEIGHBOURS = 15;
+    Scene.NEIGHBOURS = 15; //not in use
     Scene.HOME_DEATH = 16;
     Scene.HOME_DESTROYED = 17;
     Scene.RUN_AWAY = 18;
     Scene.PILLAGE_BRIT = 19;
     Scene.ELVES = 20;
+    Scene.MJOLNIR = 21;
     config.Scene = Scene;
     var Screen = (function () {
         function Screen() {
