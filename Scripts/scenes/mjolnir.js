@@ -17,8 +17,7 @@ var scenes;
             this._bg = new createjs.Bitmap(assets.getResult("MJOLNIR_B"));
             this.addChild(this._bg);
             // Create and add level description
-            this._levelDescription = new objects.Label("You find a Kraken! To your regrets, Kraken crashes your boat" +
-                " and leaves no ways to retreat. Even if you quite happily taking him with you to Valhalla, Valkyrie seems quite not happy about it...Maybe you should have done something else?", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
+            this._levelDescription = new objects.Label("You obtained Mjolnir! The battle awiating my friend!", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._levelDescription);
             // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             //this._leftButtin = new objects.Button("boat", config.Screen.BACK_BUTTON_X-20, config.Screen.BACK_BUTTON_Y+405);

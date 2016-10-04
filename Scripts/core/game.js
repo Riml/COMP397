@@ -34,6 +34,8 @@ var assetData = [
     { id: "ships", src: "../../Assets/images/ships.png" },
     { id: "start", src: "../../Assets/images/start.png" },
     { id: "stay", src: "../../Assets/images/stay.png" },
+    { id: "amulet", src: "../../Assets/images/amulet.png" },
+    { id: "MJOLNIR_B", src: "../../Assets/images/MJOLNIR_B.png" },
     { id: "background", src: "../../Assets/images/background.png" }
 ];
 function preload() {

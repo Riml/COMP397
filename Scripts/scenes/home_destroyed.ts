@@ -33,6 +33,16 @@ module scenes {
             "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._gameLabel);
 
+            if(partsOfAmulet>=2){
+            
+                // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
+                this._leftButtin = new objects.Button("amulet", config.Screen.BACK_BUTTON_X-20, config.Screen.BACK_BUTTON_Y+405);
+                this.addChild(this._leftButtin);
+                this._leftButtin.on("click", this._onMJButtonClick, this);
+
+
+            }
+            else{
              // Create button for scene and add to Game Scene container. Register for onclick event. Button will proceed tp next-next scene
             this._leftButtin = new objects.Button("shore", config.Screen.BACK_BUTTON_X-20, config.Screen.BACK_BUTTON_Y+405);
             this.addChild(this._leftButtin);
@@ -47,6 +57,7 @@ module scenes {
             this._rightButton = new objects.Button("forest", config.Screen.NEXT_BUTTON_X+180, config.Screen.NEXT_BUTTON_Y+410);
             this.addChild(this._rightButton);
             this._rightButton.on("click", this._onRightButtonClick, this);
+            }
             // Add gamescene to main stage container. 
             stage.addChild(this);
         }
@@ -66,6 +77,12 @@ module scenes {
             scene = config.Scene.HOME_DEATH;
             changeScene();
         }
+        private _onMJButtonClick(event : createjs.MouseEvent) {
+            // Set global variable to Menu Scene and call changescene function
+            scene = config.Scene.MJOLNIR;
+            changeScene();
+        }
+
         private _onRightButtonClick(event : createjs.MouseEvent) {
             // Set global variable to Menu Scene and call changescene function
             scene = config.Scene.FOREST;
