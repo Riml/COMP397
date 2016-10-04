@@ -6,17 +6,35 @@ var stage;
 var currentScene;
 var scene;
 // Game scenes
-var menuScene;
-var gameScene;
+//var menuScene : scenes.Menu;
+//var gameScene : scenes.Game_Start;
 // Player inventory
 var partsOfAmulet = 0;
 // Preload Assets required
 var assetData = [
-    { id: "Start", src: "../../Assets/images/Start.png" },
-    { id: "Bg", src: "../../Assets/images/bg.png" },
-    { id: "Gameover", src: "../../Assets/images/gameover.png" },
-    { id: "marioBtn", src: "../../Assets/images/mario.png" },
-    { id: "Back", src: "../../Assets/images/Back.png" }
+    { id: "attack", src: "../../Assets/images/attack.png" },
+    { id: "attack2", src: "../../Assets/images/attack2.png" },
+    { id: "back", src: "../../Assets/images/back.png" },
+    { id: "villages", src: "../../Assets/images/villages.png" },
+    { id: "elves", src: "../../Assets/images/elves.png" },
+    { id: "boat", src: "../../Assets/images/boat.png" },
+    { id: "cat", src: "../../Assets/images/cat.png" },
+    { id: "cat2", src: "../../Assets/images/cat2.png" },
+    { id: "dragon", src: "../../Assets/images/dragon.png" },
+    { id: "dwarfs", src: "../../Assets/images/dwarfs.png" },
+    { id: "exploreShore", src: "../../Assets/images/exploreShore.png" },
+    { id: "forest", src: "../../Assets/images/forest.png" },
+    { id: "goblins", src: "../../Assets/images/goblins.png" },
+    { id: "goFishing", src: "../../Assets/images/goFishing.png" },
+    { id: "hunt", src: "../../Assets/images/hunt.png" },
+    { id: "kraken", src: "../../Assets/images/kraken.png" },
+    { id: "myrmaids", src: "../../Assets/images/myrmaids.png" },
+    { id: "runAway", src: "../../Assets/images/runAway.png" },
+    { id: "shore", src: "../../Assets/images/shore.png" },
+    { id: "ships", src: "../../Assets/images/ships.png" },
+    { id: "start", src: "../../Assets/images/start.png" },
+    { id: "stay", src: "../../Assets/images/stay.png" },
+    { id: "background", src: "../../Assets/images/background.png" }
 ];
 function preload() {
     // Create a queue for assets being loaded
@@ -37,7 +55,7 @@ function init() {
     createjs.Ticker.setFPS(config.Game.FPS);
     createjs.Ticker.on("tick", this.gameLoop, this);
     // Set initial scene to MENU scene and call changeScene().
-    scene = config.Scene.MENU;
+    scene = config.Scene.GAME_START;
     changeScene();
 }
 function gameLoop(event) {
@@ -49,71 +67,90 @@ function gameLoop(event) {
 function changeScene() {
     // Simple state machine pattern to define scene swapping.
     switch (scene) {
-        case config.Scene.MENU:
-            stage.removeAllChildren();
-            menuScene = new scenes.Menu();
-            currentScene = menuScene;
-            console.log("Starting MENU scene");
-            break;
         case config.Scene.GAME_START:
             stage.removeAllChildren();
-            currentScene = new scenes.Game_Start();
+            currentScene = new scenes.GAME_START();
             console.log("Starting GAME_START scene");
+            break;
+        case config.Scene.SHORE:
+            stage.removeAllChildren();
+            currentScene = new scenes.SHORE();
+            console.log("Starting SHORE scene");
+            break;
+        case config.Scene.FOREST:
+            stage.removeAllChildren();
+            currentScene = new scenes.FOREST();
+            console.log("Starting FOREST scene");
+            break;
+        case config.Scene.BOAT:
+            stage.removeAllChildren();
+            currentScene = new scenes.BOAT();
+            console.log("Starting BOAT scene");
+            break;
+        case config.Scene.KRAKEN:
+            stage.removeAllChildren();
+            currentScene = new scenes.KRAKEN();
+            console.log("Starting KRAKEN scene");
+            break;
+        case config.Scene.BAD_FISHING:
+            stage.removeAllChildren();
+            currentScene = new scenes.BAD_FISIHNG();
+            console.log("Starting BAD_FISHING scene");
             break;
         case config.Scene.HOME_FIRST:
             stage.removeAllChildren();
-            currentScene = new scenes.Home_First();
+            currentScene = new scenes.HOME_FIRST();
             console.log("Starting HOME_FIRST scene");
             break;
         case config.Scene.HOME_DESTROYED:
             stage.removeAllChildren();
-            currentScene = new scenes.Home_Destroyed();
+            currentScene = new scenes.HOME_DESTROYED();
             console.log("Starting HOME_DESTROYED scene");
             break;
-        case config.Scene.HOME_METEOR:
+        case config.Scene.HOME_DEATH:
             stage.removeAllChildren();
-            currentScene = new scenes.Home_Meteor();
-            console.log("Starting HOME_METEOR scene");
+            currentScene = new scenes.HOME_DEATH();
+            console.log("Starting HOME_DEATH scene");
             break;
-        case config.Scene.HOME_PORTAL:
+        case config.Scene.BRITISH:
             stage.removeAllChildren();
-            currentScene = new scenes.Home_Portal();
-            console.log("Starting HOME_PORTAL scene");
+            currentScene = new scenes.BRITISH();
+            console.log("Starting BRITISH scene");
             break;
-        case config.Scene.HOME_THUNDER:
+        case config.Scene.RUN_AWAY:
             stage.removeAllChildren();
-            currentScene = new scenes.Home_Thunder;
-            console.log("Starting HOME_THUNDER scene");
+            currentScene = new scenes.RUN_AWAY();
+            console.log("Starting BRITISH2 scene");
             break;
-        case config.Scene.HOME_RAIN:
+        case config.Scene.MYRMAIDS:
             stage.removeAllChildren();
-            currentScene = new scenes.Home_Rain;
-            console.log("Starting HOME_RAIN scene");
+            currentScene = new scenes.MYRMAIDS();
+            console.log("Starting MYRMAIDS scene");
             break;
-        case config.Scene.FOREST_START:
+        case config.Scene.PILLAGE_BRIT:
             stage.removeAllChildren();
-            currentScene = new scenes.Forest_Start;
-            console.log("Starting FOREST_START scene");
+            currentScene = new scenes.PILLAGE_BRIT();
+            console.log("Starting PILLAGE_BRIT scene");
             break;
-        case config.Scene.FOREST_HUNT:
+        case config.Scene.RUN_AWAY:
             stage.removeAllChildren();
-            currentScene = new scenes.Forest_Hunt;
-            console.log("Starting FOREST_HUNT scene");
+            currentScene = new scenes.RUN_AWAY();
+            console.log("Starting RUN_AWAY scene");
             break;
-        case config.Scene.FOREST_LOOSE:
+        case config.Scene.VILLAGES:
             stage.removeAllChildren();
-            currentScene = new scenes.Forest_Loose;
-            console.log("Starting FOREST_LOOSE scene");
+            currentScene = new scenes.VILLAGES();
+            console.log("Starting VILLAGES scene");
             break;
-        case config.Scene.FOREST_WIN:
+        case config.Scene.ELVES:
             stage.removeAllChildren();
-            currentScene = new scenes.Forest_Win;
-            console.log("Starting FOREST_WIN scene");
+            currentScene = new scenes.ELVES();
+            console.log("Starting VILLAGES scene");
             break;
-        case config.Scene.NEW_DIMENSION:
+        case config.Scene.DWARFS:
             stage.removeAllChildren();
-            currentScene = new scenes.New_Dimension;
-            console.log("Starting FOREST_WIN scene");
+            currentScene = new scenes.DWARFS();
+            console.log("Starting VILLAGES scene");
             break;
     }
 }

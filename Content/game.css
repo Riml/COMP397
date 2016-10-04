@@ -3,7 +3,7 @@ body {
 }
 
 .game {
-    width : 80%;
+    width : 50%;
     margin: 0 auto;
 }
 
@@ -12,5 +12,5 @@ canvas {
     border-radius: 10px;
     text-align: center;
     background-color: white;
-    margin-left: 10%;
+   
 }

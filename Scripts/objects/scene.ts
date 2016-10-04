@@ -5,6 +5,8 @@
 
 module objects {
     export class Scene extends createjs.Container {
+        
+
         constructor() {
             super();
             this.start();
@@ -13,6 +15,7 @@ module objects {
         // When this object starts, add it to the current global stage container.
         public start() : void {
             //stage.addChild(this);
+           
         }
 
         public update() : void {

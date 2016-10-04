@@ -15,8 +15,9 @@ var objects;
             // MUST call parent class constructor. Requires text to be displayed, font, and color
             _super.call(this, labelString, labelFont, labelColor);
             // Set registration point of the text. Used when performing transformations
-            this.regX = this.getBounds().width * 0.5;
-            this.regY = this.getBounds().height * 0.5;
+            //this.regX = this.getBounds().width * 0.5;
+            //this.regY = this.getBounds().height * 0.5;
+            this.lineWidth = 780;
             // Set initial x,y position of the label
             this.x = x;
             this.y = y;

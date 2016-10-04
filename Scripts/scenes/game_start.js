@@ -9,37 +9,38 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var scenes;
 (function (scenes) {
-    var Game_Start = (function (_super) {
-        __extends(Game_Start, _super);
-        function Game_Start() {
+    var GAME_START = (function (_super) {
+        __extends(GAME_START, _super);
+        function GAME_START() {
             _super.call(this);
         }
         // PUBLIC FUNCTIONS
-        Game_Start.prototype.start = function () {
+        GAME_START.prototype.start = function () {
             // Add objects to the scene
             console.log("Game scene started");
             partsOfAmulet = 0;
-            l;
+            this._bg = new createjs.Bitmap(assets.getResult("background"));
+            this.addChild(this._bg);
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("One day you just wake up and...", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("Usual day of the Viking...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._gameLabel);
             // Create button for scene and add to Game Scene container. Register for onclick event
-            this._gameButton = new objects.Button("Back", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
+            this._gameButton = new objects.Button("start", config.Screen.NEXT_BUTTON_X, config.Screen.NEXT_BUTTON_Y + 420);
             this.addChild(this._gameButton);
             this._gameButton.on("click", this._onBackButtonClick, this);
             // Add gamescene to main stage container. 
             stage.addChild(this);
         };
-        Game_Start.prototype.update = function () {
+        GAME_START.prototype.update = function () {
             // Update objects
         };
-        Game_Start.prototype._onBackButtonClick = function (event) {
+        GAME_START.prototype._onBackButtonClick = function (event) {
             // Set global variable to Menu Scene and call changescene function
             scene = config.Scene.HOME_FIRST;
             changeScene();
         };
-        return Game_Start;
+        return GAME_START;
     }(objects.Scene));
-    scenes.Game_Start = Game_Start;
+    scenes.GAME_START = GAME_START;
 })(scenes || (scenes = {}));
 //# sourceMappingURL=game_start.js.map

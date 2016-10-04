@@ -4,11 +4,12 @@
 */
 
 module scenes {
-    export class Game_Start extends objects.Scene {
+    export class GAME_START extends objects.Scene {
 
         // PRIVATE VARIABLES
         private _gameLabel : objects.Label;
         private _gameButton : objects.Button;
+        private _bg: createjs.Bitmap;
 
         constructor() {
             super();
@@ -20,12 +21,15 @@ module scenes {
             console.log("Game scene started");
             partsOfAmulet=0;
 
+            this._bg = new createjs.Bitmap(assets.getResult("background"));
+            this.addChild(this._bg);
+
             // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("One day you just wake up and...", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameLabel = new objects.Label("Usual day of the Viking...", "40px Consolar", "#000000", config.Screen.TX, config.Screen.TY);
             this.addChild(this._gameLabel);
 
             // Create button for scene and add to Game Scene container. Register for onclick event
-            this._gameButton = new objects.Button("Back", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
+            this._gameButton = new objects.Button("start", config.Screen.NEXT_BUTTON_X, config.Screen.NEXT_BUTTON_Y+420);
             this.addChild(this._gameButton);
             this._gameButton.on("click", this._onBackButtonClick, this);
 
